@@ -23,7 +23,7 @@
 <body>
     <!--头部区域-->
     <header id="header">
-        <a class="left fa fa-arrow-left"></a>
+        <a href="index.html" class="left fa fa-arrow-left"></a>
         <form action="#" class="center">
             <input type="search" placeholder="请输入想要搜索的商品">
         </form>
@@ -32,35 +32,47 @@
     <!-- 主体区域 -->
     <main id="main">
         <div class="category-left">
-            <ul>
-                <li class="active"><a href="#">运动馆</a></li>
-                <li><a href="#">女士馆</a></li>
-                <li><a href="#">男士馆</a></li>
-                <li><a href="#">生活馆</a></li>
-                <li><a href="#">儿童馆</a></li>
-            </ul>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul>
+                        <li class="active"><a href="#">运动馆</a></li>
+                        <li><a href="#">女士馆</a></li>
+                        <li><a href="#">男士馆</a></li>
+                        <li><a href="#">生活馆</a></li>
+                        <li><a href="#">儿童馆</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div class="category-right">
-            <div class="mui-row">
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand1.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand2.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand3.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand4.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand5.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
-                <div class="mui-col-xs-4"><a href="#"><img src="images/brand6.png" alt="">
-                        <p>耐克</p>
-                    </a></div>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand2.png" alt="">
+                                <p>Adidas</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand3.png" alt="">
+                                <p>三叶草</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand4.png" alt="">
+                                <p>NewBalance</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand5.png" alt="">
+                                <p>匡威</p>
+                            </a></div>
+                        <div class="mui-col-xs-4"><a href="#"><img src="images/brand6.png" alt="">
+                                <p>匡威</p>
+                            </a></div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
     <!-- 底部区域 -->
@@ -72,8 +84,25 @@
             <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
         </div>
     </footer>
-
-
+    <script id="categoryLeftTpl" type="text/html">
+        {{ each rows value index }}
+            <li class="{{index == 0 ? 'active' : '' }}" ><a data-id="{{ value.id }}" href="#">{{value.categoryName}}</a></li>
+        {{ /each}}
+    </script>
+    <script id="categoryRightTpl" type="text/html">
+        {{if rows.length > 0}}
+            {{each rows value}}
+                <div class="mui-col-xs-4">
+                    <a href="#">
+                        <img src="{{value.brandLogo}}" alt="">
+                        <p>{{value.brandName}}</p>
+                    </a>
+                </div>
+            {{/each}}
+        {{else}}
+            <p>此分类暂时未有品牌入驻!</p>
+        {{/if}}
+    </script>
 
 
     <!--引入MUI的js-->

@@ -8,11 +8,17 @@ body {
         display: flex;
         background-color: #ccc;
         .category-left {
+            width: .8rem;
+            position: relative;
+            .mui-scroll {
+                height: 101%;
+            }
             ul {
                 li {
                     list-style: none;
                     a {
-                        padding: .1rem .15rem;
+                        height: .45rem;
+                        line-height: .45rem;
                         display: block;
                         text-align: center;
                         background-color: #fff;
@@ -32,6 +38,24 @@ body {
         }
         .category-right {
             flex: 1;
+            position: relative;
+            .mui-scroll {
+                min-height: 100.1%;
+            }
+            .mui-row {
+                padding: .1rem;
+            }
+            a {
+                display: block;
+                background-color: #fff;
+                img {
+                    width: 100%;
+                }
+                p {
+                    text-align: center;
+                    line-height: .2rem;
+                }
+            }
         }
     }
 }

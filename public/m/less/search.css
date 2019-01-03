@@ -1,4 +1,3 @@
-/* 引入公共base.less */
 /* 头部样式区域 */
 body {
   height: 100vh;
@@ -78,54 +77,35 @@ ul {
 #footer a.active {
   color: orange;
 }
-/* 分类页面的主体区域 */
-body #main {
-  display: flex;
-  background-color: #ccc;
-}
-body #main .category-left {
-  width: .8rem;
-  position: relative;
-}
-body #main .category-left .mui-scroll {
-  height: 101%;
-}
-body #main .category-left ul li {
-  list-style: none;
-}
-body #main .category-left ul li a {
-  height: .45rem;
-  line-height: .45rem;
-  display: block;
-  text-align: center;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  color: #666;
-}
-body #main .category-left ul li a:active {
-  color: #666666;
-}
-body #main .category-left ul li.active a {
-  background-color: #ccc;
-}
-body #main .category-right {
-  flex: 1;
-  position: relative;
-}
-body #main .category-right .mui-scroll {
-  min-height: 100.1%;
-}
-body #main .category-right .mui-row {
+/* 搜索框区域 */
+#searchBar {
   padding: .1rem;
 }
-body #main .category-right a {
-  display: block;
+#searchBar form {
+  display: flex;
+}
+#searchBar form .btn-search {
+  background-color: #006699;
+  width: .6rem;
+  border-radius: 0 .03rem .03rem 0;
+}
+#searchBar form .input-search {
+  flex: 1;
+  width: 90%;
+  margin-bottom: 0;
   background-color: #fff;
+  border: 1px solid #006699;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .03rem 0 0 .03rem;
 }
-body #main .category-right a img {
-  width: 100%;
+#history .mui-card-header {
+  font-size: .14rem;
 }
-body #main .category-right a p {
-  text-align: center;
-  line-height: .2rem;
+#history .mui-card-header a {
+  color: #666;
+}
+#history .mui-table-view li {
+  padding: .11rem .15rem;
+  line-height: .21rem;
 }
