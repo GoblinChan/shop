@@ -1,0 +1,75 @@
+/* 头部样式区域 */
+body {
+  height: 100vh;
+  padding: .45rem 0;
+  font-size: .14rem;
+  line-height: .14rem;
+}
+body #main {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+#header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #006699;
+  height: .45rem;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+#header .center {
+  flex: 1;
+  color: #fff;
+  font-weight: normal;
+  line-height: .45rem;
+}
+#header .center input {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+/* 底部区域 */
+#footer {
+  background-color: #006699;
+  height: .45rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  /* 注意加宽度 已经没有默认宽度了 */
+  width: 100%;
+}
+#footer a {
+  display: flex;
+  height: .45rem;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 点击颜色区分 */
+}
+#footer a.active {
+  color: orange;
+}

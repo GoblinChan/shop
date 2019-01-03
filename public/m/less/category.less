@@ -1,0 +1,37 @@
+/* 引入公共base.less */
+
+@import 'base.less';
+/* 分类页面的主体区域 */
+
+body {
+    #main {
+        display: flex;
+        background-color: #ccc;
+        .category-left {
+            ul {
+                li {
+                    list-style: none;
+                    a {
+                        padding: .1rem .15rem;
+                        display: block;
+                        text-align: center;
+                        background-color: #fff;
+                        border-bottom: 1px solid #ccc;
+                        color: #666;
+                        &:active {
+                            color: #666666;
+                        }
+                    }
+                    &.active {
+                        a {
+                            background-color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+        .category-right {
+            flex: 1;
+        }
+    }
+}
