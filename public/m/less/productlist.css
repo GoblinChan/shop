@@ -99,3 +99,60 @@ ul {
 #footer a.active {
   color: orange;
 }
+/* 主体区域 */
+#main {
+  padding-top: .5rem;
+  /* 商品列表 */
+}
+#main #searchBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 0.55em;
+}
+#main .productlist {
+  /* 让下拉刷新父容器参照product-list来定位 */
+  position: relative;
+  /* 高度和main的内容一样高100% */
+  height: 100%;
+}
+#main .productlist .mui-card-header {
+  background-color: #eeeeee;
+  line-height: .44rem;
+  height: .44rem;
+}
+#main .productlist .mui-card-header a {
+  color: #666666;
+  font-size: .14rem;
+}
+#main .productlist .mui-card-header a.active {
+  color: orangered;
+}
+#main .productlist .mui-card-content .mui-row > div:nth-child(n+3) {
+  padding-top: .1rem;
+}
+#main .productlist .mui-card-content .mui-row > div:nth-child(odd) {
+  padding-right: .05rem;
+}
+#main .productlist .mui-card-content .mui-row > div:nth-child(even) {
+  padding-left: .05rem;
+}
+#main .productlist .mui-card-content .mui-row > div a {
+  display: block;
+  text-align: center;
+  padding-bottom: .1rem;
+  box-shadow: 0 0 2px #ccc;
+}
+#main .productlist .mui-card-content .mui-row > div a img {
+  width: 100%;
+}
+#main .productlist .mui-card-content .mui-row > div a .product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: .16rem;
+}

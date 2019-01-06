@@ -18,9 +18,14 @@ $(function () {
             localStorage.setItem('historyData1', arr)
             queryHistory()
             console.log($('.input-search'));
+
+
+            location = 'productlist.html?key=' + search + '&time=' + new Date().getTime()
             $('.input-search')[0].value = "";
         }
     })
+
+    // 模板生成
     queryHistory()
 
     function queryHistory() {
@@ -48,6 +53,7 @@ $(function () {
         localStorage.setItem('historyData1', arr);
         queryHistory()
     })
+
     // 点击自动填写输入框
     $('.mui-table-view').on('tap', 'li', function () {
         var str = this.innerText;
