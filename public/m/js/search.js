@@ -57,6 +57,7 @@ $(function () {
     // 点击自动填写输入框
     $('.mui-table-view').on('tap', 'li', function () {
         var str = this.innerText;
-        $('.input-search')[0].value = str;
+        console.log(str);
+        location = "productlist.html?key=" + str + "&time=" + new Date().getTime();
     })
 })
