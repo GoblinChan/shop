@@ -130,6 +130,9 @@ ul {
 #main .productlist .mui-card-header a.active {
   color: orangered;
 }
+#main .productlist .mui-table-view {
+  background-color: #efeff4;
+}
 #main .productlist .mui-card-content .mui-row > div:nth-child(n+3) {
   padding-top: .1rem;
 }

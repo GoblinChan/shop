@@ -1,0 +1,4 @@
+@import 'base.css';
+#main .mui-input-group .mui-input-row input {
+  font-size: .14rem;
+}

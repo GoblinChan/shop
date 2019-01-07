@@ -1,0 +1,52 @@
+@import 'base.css';
+#detail .mui-card {
+  margin: 0;
+}
+#detail .mui-card > div {
+  padding: .1rem;
+}
+#detail .mui-card > div > p {
+  margin-bottom: 0;
+  color: #333;
+  line-height: .2rem;
+}
+#detail .mui-card > div .title span {
+  font-weight: bold;
+}
+#detail .mui-card > div .price {
+  font-size: .14rem;
+}
+#detail .mui-card > div .price span {
+  font-weight: bold;
+  color: red;
+}
+#detail .mui-card > div .price del {
+  color: #aaa;
+}
+#detail .mui-card > div .size {
+  line-height: .35rem;
+}
+#detail .mui-card > div .size button {
+  margin-bottom: .04rem;
+}
+#detail .mui-card > div .num {
+  color: #333;
+}
+#footer {
+  background-color: #cccccc;
+}
+#footer .fa-shopping-cart {
+  font-size: .20rem;
+  color: #333;
+}
+#footer .mui-row > div {
+  height: .45rem;
+}
+#footer .mui-row > div button {
+  height: 100%;
+  line-height: 100%;
+  width: 100%;
+}
+#footer .mui-row > div:nth-child(n+2) {
+  padding: .05rem;
+}

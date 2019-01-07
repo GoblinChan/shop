@@ -44,10 +44,10 @@
                         <div class="mui-card">
                             <!--页眉，放置标题-->
                             <div class="mui-card-header">
-                                <a href="#" data-sort-type='time' class="active">上架时间</a>
-                                <a href="#" data-sort-type='price' data-sort='2'>价格</a>
-                                <a href="#" data-sort-type="num" data-sort='2'>销量</a>
-                                <a href="#" data-sort-type="count">折扣</a>
+                                <a href="#" data-sort-type='time' class="active" data-sort='2'>上架时间<i class="fa fa-angle-down"></i></a>
+                                <a href="#" data-sort-type='price' data-sort='2'>价格<i class="fa fa-angle-down"></i></a>
+                                <a href="#" data-sort-type="num" data-sort='2'>销量<i class="fa fa-angle-down"></i></a>
+                                <a href="#" data-sort-type="count" data-sort='2'>折扣<i class="fa fa-angle-down"></i></a>
                             </div>
                             <!--内容区-->
                             <div class="mui-card-content">
@@ -81,7 +81,7 @@
                     <p class="product-num">
                         销量:{{ value.num}}
                     </p>
-                    <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                    <button type="button" class="mui-btn mui-btn-primary btn-buy" data-id='{{ value.id }}'>立即购买</button>
                 </a>
             </div>
         {{ /each }}

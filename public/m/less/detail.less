@@ -1,0 +1,59 @@
+@import 'base.css';
+#detail {
+    .mui-card {
+        margin: 0;
+        >div {
+            padding: .1rem;
+            >p {
+                margin-bottom: 0;
+                color: #333;
+                line-height: .2rem;
+            }
+            .title {
+                span {
+                    font-weight: bold;
+                }
+            }
+            .price {
+                font-size: .14rem;
+                span {
+                    font-weight: bold;
+                    color: red;
+                }
+                del {
+                    color: #aaa;
+                }
+            }
+            .size {
+                line-height: .35rem;
+                button {
+                    margin-bottom: .04rem;
+                }
+            }
+            .num {
+                color: #333;
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: #cccccc;
+    .fa-shopping-cart {
+        font-size: .20rem;
+        color: #333;
+    }
+    .mui-row {
+        >div {
+            height: .45rem;
+            button {
+                height: 100%;
+                line-height: 100%;
+                width: 100%;
+            }
+            &:nth-child(n+2) {
+                padding: .05rem;
+            }
+        }
+    }
+}

@@ -14,7 +14,6 @@ $(function () {
     obj.proName = getQueryString('key');
     getProductList()
 
-
     // 搜索按钮
     $('.mui-btn').on('tap', function () {
         obj.proName = $('.input-search').val().trim();
@@ -34,17 +33,32 @@ $(function () {
     $('.mui-card-header a').on('tap', function () {
         var sortType = $(this).data('sort-type');
         var sort = $(this).data('sort');
+        if (sort == 2) {
+            $(this).children().removeClass();
+            $(this).children().addClass('fa fa-angle-down');
+        } else {
+            $(this).children().removeClass();
+            $(this).children().addClass('fa fa-angle-up');
+        }
         sort = sort == 2 ? 1 : 2;
+
         $(this).data('sort', sort);
         obj[sortType] = sort;
+        // getProductList() obj[sortType] = "";
+        $(this).addClass('active').siblings().removeClass('active')
         getProductList()
         obj[sortType] = "";
-        $(this).addClass('active').siblings().removeClass('active')
+
     })
 
 
+    // 添加购物车功能
+    $('.mui-card-content .mui-row').on('tap', '.btn-buy', function () {
+        var id = $(this).data('id');
+        location = "detail.html?id=" + id;
+    })
 
-    // 下拉刷新
+    // 下拉刷新 上拉加载功能模块
     mui.init({
         pullRefresh: {
             container: '#pullrefresh',
@@ -79,6 +93,7 @@ $(function () {
                                 pageSize: 2
                             },
                             success: function (data) {
+
                                 if (data.data.length > 0) {
                                     var html = template('productTpl', data)
                                     $('.mui-card-content .mui-row').append(html)
